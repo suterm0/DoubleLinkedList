@@ -13,7 +13,7 @@ class Node:
         return repr(self.data)
 
 
-class DoubleLinkedList:
+class DoubleLinkedListNode:
     def __init__(self):
         self.head = None
         self.tail = None
@@ -45,7 +45,6 @@ class DoubleLinkedList:
         new_node = Node(data)
         new_node.prev = None
         new_node.next = self.head
-        self.head.prev = new_node
         self.head = new_node
 
     def remove_head(self):
